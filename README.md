@@ -73,8 +73,49 @@ playwright install chromium
 
 3. **Environment**: Create a `.env` file with your API keys:
 ```env
-GROK_API_KEY=your_key_here
-SERPAPI_API_KEY=your_key_here
+# =================================================================
+# 🔑 LLM & AI ORCHESTRATION
+# =================================================================
+# Primary model for tailoring resumes and generating cover letters.
+# If XAI is present, the agent defaults to 'grok-beta'. [cite: 1, 10]
+XAI_API_KEY="your_xai_api_key_here"
+
+# Backup or primary alternative for LangGraph orchestration.
+GEMINI_API_KEY="your_gemini_api_key_here"
+
+# standard fallback for OpenAI-compatible client libraries. [cite: 1, 10]
+OPENAI_API_KEY="your_openai_api_key_here"
+
+# =================================================================
+# 🔍 SEARCH & SCRAPING TOOLS
+# =================================================================
+# Used by ScraperRouter for high-speed Google Jobs API results.
+# Get a free key at serper.dev (supports "San Diego" geo-location). 
+SERPER_API_KEY="your_serper_api_key_here"
+
+# Alternative to Serper if using the original Google Search logic. [cite: 1]
+SERPAPI_API_KEY="your_serpapi_key_here"
+
+# =================================================================
+# ⚙️ AGENT CONFIGURATION
+# =================================================================
+# Set to 'true' to run LLMs locally via Ollama/LlamaEdge. 
+USE_LOCAL=true
+
+# The email address to target for 'myemailaddress.com' logic. [cite: 5, 9]
+TARGET_EMAIL="tommy42@cox.net"
+
+# =================================================================
+# 📁 DIRECTORY & DB PATHS
+# =================================================================
+# Path to the SQLite memory and jobs storage. [cite: 2, 6, 9]
+DATABASE_PATH="jobs.db"
+
+# Path to your master markdown resume. [cite: 1, 7, 9]
+MASTER_RESUME_PATH="resume.md"
+
+# Folder where tailored job artifacts are saved. [cite: 1, 8, 9]
+OUTPUT_DIR="jobs/"
 
 ```
 
