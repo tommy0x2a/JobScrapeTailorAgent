@@ -103,7 +103,7 @@ SERPAPI_API_KEY="your_serpapi_key_here"
 USE_LOCAL=true
 
 # The email address to target for 'myemailaddress.com' logic. [cite: 5, 9]
-TARGET_EMAIL="tommy42@cox.net"
+TARGET_EMAIL="myEmail@service.com"
 
 # =================================================================
 # 📁 DIRECTORY & DB PATHS
